@@ -1,35 +1,20 @@
-//import logo from './levvel-logo.svg';
-//import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
 import React from 'react';
 import './App.css';
-//import { Link } from "react-router-dom"
-//import PostList from './components/PostList'
 
-const authorsPage = () => {
+
+function authorsPage(props) {
     return (
         <div className="App">
       
         <header className="top">
-          {/* <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>  */}
-  
-          <h1 className="topHeader">Wood's Food Blog</h1>
+          <h1 className="topHeader">Levvel's Food Blog</h1>
         </header>
-        {/* <Link to="/">authorsPage</Link> */}
-        <div>Authors name</div>
+        <div>{props.name} name</div>
         <div className="blogHolder"><h2>Check out Top Posts from our Authors!</h2>
-        </div>
         
+        </div>
+        <div className="userContainer"><h3 className="titleName">{ props.title}</h3>
+                     { props.body } </div>
     </div>
     );
   };

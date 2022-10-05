@@ -4,7 +4,7 @@ import React from 'react';
 import './App.css';
 // import { BrowserRouter as Router, 
 //   Route, Switch } from "react-router-dom";
-//mport authorspage from './authorspage';
+import authorspage from './authorspage';
 //import PostList from './components/PostList'
 
 class App extends React.Component {
@@ -39,20 +39,8 @@ class App extends React.Component {
     <div className="App">
       
       <header className="top">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>  */}
-
-        <h1 className="topHeader">Wood's Food Blog</h1>
+      
+        <h1 className="topHeader">Levvel's Food Blog</h1>
       </header>
       <div className="blogHolder"><h2>Check out Top Posts from our Authors!</h2>
       
@@ -62,7 +50,7 @@ class App extends React.Component {
                 items.map((item) => ( 
                 <ol key = { item.id } >
                   
-                    <div className="userName">{ item.name } </div>
+                    <div className="userName"><authorspage name={item.name} title={item.title} body={item.body} />{ item.name } </div>
                     <div className="userContainer"><h3 className="titleName">{ item.title}</h3>
                      { item.body } </div>
                     </ol>
